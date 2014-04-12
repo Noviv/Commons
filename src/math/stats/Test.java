@@ -1,7 +1,6 @@
 package math.stats;
 
 import exceptions.MException;
-import java.util.ArrayList;
 import info.InfoSet;
 import utils.PropType;
 
@@ -9,29 +8,25 @@ public class Test {
 
     private Test() {
     }
-    
-    public static void main(String[] args) {
-        System.out.println(Test.onePropZTest(.5, 40, 100, PropType.NOT_EQUAL_P0));
-    }
 
     public static InfoSet onePropZTest(double p0, int x, int n, PropType type) {
-        ArrayList<String> msgs = new ArrayList<>();
+        InfoSet msgs = new InfoSet();
         if (type == PropType.NOT_EQUAL_P0) {
-            msgs.add("Comparison type: not equal to p0.");
-            msgs.add("Sample mean = " + (double) (x / n));
-            msgs.add("Sample standard deviation = " + Math.sqrt((p0 * (1 - p0)) / n));
-            msgs.add("Sample size = " + n);
+            msgs.add(StatInfoConstant.COMPARE_TYPE, StatInfoConstant.TYPE_NOT_EQUAL_P0);
+            msgs.add(StatInfoConstant.SAMPLE_MEAN, (double) (x / n));
+            msgs.add(StatInfoConstant.SAMPLE_STD_DEV, Math.sqrt((p0 * (1 - p0)) / n));
+            msgs.add(StatInfoConstant.SAMPLE_SIZE, n);
             try {
-                msgs.add("Test statistic: z-score = "  + Test.calcZScore(((double) x / (double) n), p0, Math.sqrt((p0 * (1 - p0)) / n)));//(((x / n) - p0) / Math.sqrt((p0 * (1 - p0)) / n))
+                msgs.add(StatInfoConstant.Z_SCORE, Test.calcZScore(((double) x / (double) n), p0, Math.sqrt((p0 * (1 - p0)) / n)));//(((x / n) - p0) / Math.sqrt((p0 * (1 - p0)) / n))
             } catch (MException ex) {
             }
-            msgs.add("P-value = " + (normalcdf((((x / n) - p0) / Math.sqrt((p0 * (1 - p0)) / n )))));
+            msgs.add(StatInfoConstant.P_VAL, (normalcdf((((x / n) - p0) / Math.sqrt((p0 * (1 - p0)) / n)))));
         } else if (type == PropType.GREATER_THAN_P0) {
-            msgs.add("Comparison type: greater than p0.");
+            msgs.add(StatInfoConstant.COMPARE_TYPE, StatInfoConstant.TYPE_GREATER_P0);
         } else if (type == PropType.LESS_THAN_P0) {
-            msgs.add("Comparison type: less than p0.");
+            msgs.add(StatInfoConstant.COMPARE_TYPE, StatInfoConstant.TYPE_LESS_P0);
         }
-        return new InfoSet(msgs.toArray());
+        return msgs;
     }
 
     /**
@@ -44,13 +39,13 @@ public class Test {
      * interval.
      */
     public static InfoSet confidInt(double proportion, double critical, int n) {
-        ArrayList<String> msgs = new ArrayList<>();
-        msgs.add("Confidence Interval: Proportion");
-        msgs.add("~Sample Size: " + n);
-        msgs.add("~Mean: " + proportion);
+        InfoSet info = new InfoSet();
+        info.add(StatInfoConstant.CONFID_INT_TYPE, "Proportion");
+        info.add(StatInfoConstant.SAMPLE_SIZE, n);
+        info.add(StatInfoConstant.SAMPLE_MEAN, proportion);
         double me = critical * Math.sqrt((proportion * (1 - proportion)) / n);
-        msgs.add("(" + (proportion - me) + ", " + (proportion + me) + ")");
-        return new InfoSet(msgs.toArray());
+        info.add(StatInfoConstant.CONFID_INT, "(" + (proportion - me) + ", " + (proportion + me) + ")");
+        return info;
     }
 
     /**
@@ -64,13 +59,13 @@ public class Test {
      * interval.
      */
     public static InfoSet confidInt(double mean, double critical, double std, int n) {
-        ArrayList<String> msgs = new ArrayList<>();
-        msgs.add("Confidence Interval: Sample");
-        msgs.add("~Sample Size (n): " + n);
-        msgs.add("~Mean: " + mean);
+        InfoSet info = new InfoSet();
+        info.add(StatInfoConstant.CONFID_INT_TYPE, "Sample");
+        info.add(StatInfoConstant.SAMPLE_SIZE, n);
+        info.add(StatInfoConstant.SAMPLE_SIZE, mean);
         double me = critical * (std / Math.sqrt((double) n));
-        msgs.add("(" + (mean - me) + ", " + (mean + me) + ")");
-        return new InfoSet(msgs.toArray());
+        info.add(StatInfoConstant.CONFID_INT, "(" + (mean - me) + ", " + (mean + me) + ")");
+        return info;
     }
 
     /**

@@ -14,9 +14,9 @@ public class Network {
     public String getName() {
         return name;
     }
-    
+
     public class NetworkHead extends NetworkComponent {
-        
+
     }
 
     public class NetworkBuilder {

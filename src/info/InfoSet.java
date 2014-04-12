@@ -1,23 +1,16 @@
 package info;
 
+import java.util.HashMap;
+
 public class InfoSet {
 
-    private Object[] data;
+    private HashMap<String, Object> obj = new HashMap<>();
 
-    public InfoSet(Object... data) {
-        this.data = data;
+    public void add(String key, Object add) {
+        obj.put(key, add);
     }
 
-    public Object[] getData() {
-        return data;
-    }
-
-    @Override
-    public String toString() {
-        String toReturn = (String) data[0];
-        for (int i = 1; i < data.length; i++) {
-            toReturn += "\n" + data[i];
-        }
-        return toReturn;
+    public Object get(String key) {
+        return obj.get(key);
     }
 }

@@ -1,8 +1,9 @@
 package math.stats;
 
-import exceptions.MException;
-
 public class ListStats {
+
+    private ListStats() {
+    }
 
     public static double mean(int[] ary) {
         double mean = 0;
