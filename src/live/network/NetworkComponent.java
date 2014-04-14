@@ -6,7 +6,7 @@ import live.network.config.IP.Port;
 
 public class NetworkComponent {
 
-    public ArrayList<Object> pieces;
+    private ArrayList<Object> pieces;
 
     public NetworkComponent(Host h) {
         pieces = new ArrayList<>();
@@ -21,6 +21,6 @@ public class NetworkComponent {
     }
 
     public void addPart(Object o) {
-
+        pieces.add(o);
     }
 }

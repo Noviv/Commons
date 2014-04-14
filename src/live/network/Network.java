@@ -16,7 +16,7 @@ public class Network {
     }
 
     public class NetworkHead extends NetworkComponent {
-
+        
     }
 
     public class NetworkBuilder {
@@ -33,9 +33,7 @@ public class Network {
 
         public void build(Network n) {
             for (NetworkComponent comp : comps) {
-//                if () {
-
-//                }
+                
             }
         }
     }

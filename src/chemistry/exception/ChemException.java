@@ -5,6 +5,7 @@ import chemistry.Element;
 public class ChemException extends Exception {
 
     public static final ChemException E_CONFIG_BASE_NOT_FOUND = new ChemException("Electron configuration base could not be found.");
+    public static final ChemException E_CONFIG_BASE_OUT_BOUNDS = new ChemException("One of your electron configuration bases was not correct.");
 
     private Object err;
 
