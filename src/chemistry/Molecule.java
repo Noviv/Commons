@@ -7,6 +7,14 @@ public class Molecule {
 
     private ArrayList<MoleculeBase> molecule;
 
+    /**
+     * Creates a new molecule.
+     *
+     * @param elems The elements in the molecule.
+     * @param freqs The number of elements for each molecule in the latter
+     * array.
+     * @throws ChemException Thrown if the two arrays are not the same length.
+     */
     public Molecule(Element[] elems, int[] freqs) throws ChemException {
         if (elems.length != freqs.length) {
             throw ChemException.MOLECULE_ELEM_AND_FREQ_NO_MATCH;
@@ -18,7 +26,7 @@ public class Molecule {
             molecule.add(new MoleculeBase(elems[i], freqs[i]));
         }
     }
-    
+
     @Override
     public String toString() {
         String toReturn = "";

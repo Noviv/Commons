@@ -14,7 +14,12 @@ public class PeriodicTable {
         elements = new HashMap<>();
         loadElements();
     }
-    
+
+    /**
+     * Gets the <code>PeriodicTable</code> singleton.
+     *
+     * @return
+     */
     public static PeriodicTable getInstance() {
         return pt;
     }
@@ -27,6 +32,12 @@ public class PeriodicTable {
         }
     }
 
+    /**
+     * Gets an element based on atomic number.
+     *
+     * @param atomicNumber The atomic number of the goal element.
+     * @return The element.
+     */
     public Element getElement(int atomicNumber) {
         return elements.get(atomicNumber);
     }
