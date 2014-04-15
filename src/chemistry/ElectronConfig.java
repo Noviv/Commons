@@ -39,10 +39,6 @@ public class ElectronConfig {
                 bases.add(base.substring(0, 2) + i);
             }
         }
-
-        for (String base : bases) {
-            System.out.println(base);
-        }
     }
 
     public String getUnsplitBase(int index) {

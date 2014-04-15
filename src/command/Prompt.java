@@ -2,6 +2,7 @@ package command;
 
 import java.util.Scanner;
 import command.printerrors.Error;
+import java.util.HashMap;
 import javax.swing.filechooser.FileSystemView;
 
 public final class Prompt {
@@ -10,13 +11,15 @@ public final class Prompt {
     private final Scanner input;
     private String cmd;
     private boolean extensions = false;
-    
+
+    private HashMap<Character, String> variables;
     private char currentVariable = 'a';
 
     private String[] cmdSplit;
     private boolean firstLine = true;
 
     public Prompt() {
+        variables = new HashMap<>();
         input = new Scanner(System.in);
         while (true) {
             cmd = getCmd();
@@ -27,7 +30,20 @@ public final class Prompt {
     }
 
     public void checkOptions(String[] options) {
-        if (Command.commandCalls.contains(options[0])) {
+        if (options[0].equals("store")) {
+            if (options.length > 2) {
+                Error.err(Error.COMMAND_NO_EXTENSIONS);
+            } else if (options.length == 1) {
+                Error.err(Error.EXTENSION_NEEDS_PARAMETERS);
+            } else {
+                variables.put(currentVariable, options[1]);
+                System.out.println("Stored under " + currentVariable);
+                currentVariable++;
+            }
+
+        } else if (options[0].equals("get")) {
+            System.out.println(variables.get(options[1].toCharArray()[0]));
+        } else if (Command.commandCalls.contains(options[0])) {
             Command.commands.get(Command.commandCalls.indexOf(options[0])).execute(options);
         } else {
             Error.err(Error.COMMAND_NO_INSTANCE);

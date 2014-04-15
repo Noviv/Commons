@@ -8,6 +8,7 @@ public enum ChemConstant {
 
         NON_METAL,
         METAL,
-        METALLOID;
+        METALLOID,
+        NOBLE_GAS;
     }
 }

@@ -71,6 +71,17 @@ public class Command {
             }
         }
     });
+    
+    public static final Command STORE = new Command("", "store", new Action() {
+        @Override
+        public void execute(Object... params) {
+            if (params.length > 1) {
+                Error.err(Error.TOO_MANY_EXTENSIONS);
+            } else {
+                
+            }
+        }
+    });
 
     public String call;
     public String[] extensions;
