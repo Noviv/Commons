@@ -16,19 +16,19 @@ public class ElectronConfig {
 
         for (String base : split) {
             if (base.contains("s")) {
-                if (Integer.parseInt(base.substring(2)) > 2) {
+                if (Integer.parseInt(base.substring(2)) > 2 || Integer.parseInt(base.substring(2)) < 0) {
                     throw ChemException.E_CONFIG_BASE_OUT_BOUNDS;
                 }
             } else if (base.contains("p")) {
-                if (Integer.parseInt(base.substring(2)) > 6) {
+                if (Integer.parseInt(base.substring(2)) > 6 || Integer.parseInt(base.substring(2)) < 0) {
                     throw ChemException.E_CONFIG_BASE_OUT_BOUNDS;
                 }
             } else if (base.contains("d")) {
-                if (Integer.parseInt(base.substring(2)) > 10) {
+                if (Integer.parseInt(base.substring(2)) > 10 || Integer.parseInt(base.substring(2)) < 0) {
                     throw ChemException.E_CONFIG_BASE_OUT_BOUNDS;
                 }
             } else if (base.contains("f")) {
-                if (Integer.parseInt(base.substring(2)) > 14) {
+                if (Integer.parseInt(base.substring(2)) > 14 || Integer.parseInt(base.substring(2)) < 0) {
                     throw ChemException.E_CONFIG_BASE_OUT_BOUNDS;
                 }
             }
