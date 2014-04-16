@@ -23,4 +23,5 @@ public class NetworkComponent {
     public void addPart(Object o) {
         pieces.add(o);
     }
+    
 }

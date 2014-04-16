@@ -1,14 +1,20 @@
 package live.network;
 
 import exceptions.CreationException;
+import java.io.IOException;
+import java.net.Socket;
+import live.network.config.IP;
 
 public class Network {
 
     private String name;
+    private NetworkBuilder nb;
 
     public Network(String name, NetworkBuilder nb) {
         this.name = name;
-        nb.build(this);
+        this.nb = nb;
+        assert (this.nb == nb);
+        this.nb.build(this);
     }
 
     public String getName() {
@@ -16,7 +22,18 @@ public class Network {
     }
 
     public class NetworkHead extends NetworkComponent {
-        
+
+        public IP ip;
+
+        private Socket socket;
+
+        public NetworkHead(IP ip) {
+            this.ip = ip;
+            try {
+                socket = new Socket(ip.host.getAsString(), ip.port.getAsInt());
+            } catch (IOException ex) {
+            }
+        }
     }
 
     public class NetworkBuilder {

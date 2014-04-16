@@ -15,4 +15,12 @@ public class M1 {
     public static String doubleHash(String base) {
         return hash(hash(base));
     }
+    
+    public static String iterativeHash(String base, int n) {
+        String toReturn = base;
+        for (int i = 0; i < n; i++) {
+            toReturn = hash(toReturn);
+        }
+        return toReturn;
+    }
 }

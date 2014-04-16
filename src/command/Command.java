@@ -2,6 +2,7 @@ package command;
 
 import java.util.ArrayList;
 import command.printerrors.Error;
+import live.network.Network;
 
 public class Command {
 

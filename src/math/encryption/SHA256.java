@@ -10,9 +10,10 @@ import java.security.NoSuchAlgorithmException;
  * @author Matthew Webb
  */
 public class SHA256 {
+
     private SHA256() {
     }
-
+    
     /**
      * Hashes a given string with a SHA256 algorithm.
      *
@@ -49,5 +50,16 @@ public class SHA256 {
      */
     public static String doubleHash(String toDouble) throws MException {
         return hash(hash(toDouble));
+    }
+
+    public static String iterativeHash(String base, int n) {
+        String toReturn = base;
+        for (int i = 0; i < n; i++) {
+            try {
+                toReturn = hash(toReturn);
+            } catch (MException e) {
+            }
+        }
+        return toReturn;
     }
 }
