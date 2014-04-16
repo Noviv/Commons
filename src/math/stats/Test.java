@@ -2,7 +2,6 @@ package math.stats;
 
 import exceptions.MException;
 import info.InfoSet;
-import utils.PropType;
 
 public class Test {
 

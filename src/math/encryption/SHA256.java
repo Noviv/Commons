@@ -10,6 +10,8 @@ import java.security.NoSuchAlgorithmException;
  * @author Matthew Webb
  */
 public class SHA256 {
+    private SHA256() {
+    }
 
     /**
      * Hashes a given string with a SHA256 algorithm.

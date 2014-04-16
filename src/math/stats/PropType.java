@@ -1,4 +1,4 @@
-package utils;
+package math.stats;
 
 public enum PropType {
     NOT_EQUAL_P0,

@@ -1,5 +1,7 @@
 package math.correlation;
 
+import utils.Coordinate;
+
 public class SlopeCorre {
 
     private SlopeCorre() {
@@ -16,9 +18,27 @@ public class SlopeCorre {
         }
         return toReturn;
     }
-    
-    public static double correlateOne(double[] a, double slope) {
-        
-        return 0.0;
+
+    /**
+     * Correlate a set of data based on a slope.
+     *
+     * @param a The set of data in <code>Coordiante</code>s.
+     * @param slope The slope of the expected curve.
+     * @return The correlation.
+     */
+    public static double correlateOne(Coordinate[] a, double slope) {
+        Coordinate[] exp = new Coordinate[a.length];
+        for (int i = 0; i < exp.length; i++) {
+            exp[i].setX(a[i].getX());
+            exp[i].setY((int) (slope * a[i].getX()));
+        }
+
+        double toReturn = 0.0;
+        for (int i = 0; i < a.length; i++) {
+            toReturn += Math.abs(a[i].getY() - exp[i].getY());
+        }
+        assert (a.length == exp.length);
+        toReturn /= a.length;
+        return toReturn;
     }
 }
