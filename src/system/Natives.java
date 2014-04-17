@@ -1,11 +1,18 @@
 package system;
 
+import java.io.File;
+
 public class Natives {
 
     public native String nativeFoo();
 
     static {
-        System.loadLibrary("foo");
+        File f = new File("src/system/foo.c");
+        if (f.exists()) {
+            System.load(f.getAbsolutePath());
+        } else {
+            System.out.println("file no exist");
+        }
     }
 
     public void print() {

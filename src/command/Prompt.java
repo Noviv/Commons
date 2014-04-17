@@ -18,10 +18,6 @@ public final class Prompt {
     private String[] cmdSplit;
     private boolean firstLine = true;
 
-    public static void main(String[] args) {
-        new Prompt();
-    }
-    
     public Prompt() {
         variables = new HashMap<>();
         input = new Scanner(System.in);
