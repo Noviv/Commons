@@ -70,8 +70,8 @@ public class Function {
      * @param x The x value of the function.
      * @return The y value of the function for a given x.
      */
-    public int func(int x) {
-        int temp = 0, y = 0;
+    public double func(double x) {
+        double temp = 0, y = 0;
 
         for (String term : terms) {
             if (term.contains("x")) {

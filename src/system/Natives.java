@@ -21,5 +21,6 @@ public class Natives {
     }
     public static void main(String[] args) {
         (new Natives()).print();
+
     }
 }

@@ -1,7 +1,7 @@
 package processing;
 
 import java.awt.Component;
-import java.awt.FlowLayout;
+import java.awt.GridLayout;
 import java.util.ArrayList;
 import java.util.HashMap;
 import javax.swing.JFrame;
@@ -36,7 +36,7 @@ public class ProcessBoard {
         frame = new JFrame();
         frame.setSize(500, 500);
         frame.setTitle("Process Board");
-        frame.setLayout(new FlowLayout());
+        frame.setLayout(new GridLayout());
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         frame.add(panel);
@@ -45,6 +45,8 @@ public class ProcessBoard {
 
     private static void update() {
         if (enabled) {
+            panel.removeAll();
+            comps.clear();
             for (String s : strings.keySet()) {
                 comps.add(new JLabel(s + ": " + strings.get(s)));
             }
@@ -61,7 +63,7 @@ public class ProcessBoard {
                 comps.add(new JLabel(s + ": " + booleans.get(s)));
             }
 
-            panel.removeAll();
+            
             for (Component c : comps) {
                 if (c != null) {
                     panel.add(c);
