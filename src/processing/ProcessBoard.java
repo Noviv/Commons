@@ -25,13 +25,16 @@ public class ProcessBoard {
     private ProcessBoard() {
     }
 
+    /**
+     * Initialize the <code>ProcessBoard</code>. Must be called first.
+     */
     public static void init() {
         strings = new HashMap<>();
         integers = new HashMap<>();
         doubles = new HashMap<>();
         booleans = new HashMap<>();
         comps = new ArrayList<>();
-        
+
         panel = new JPanel();
         frame = new JFrame();
         frame.setSize(500, 500);
@@ -63,7 +66,6 @@ public class ProcessBoard {
                 comps.add(new JLabel(s + ": " + booleans.get(s)));
             }
 
-            
             for (Component c : comps) {
                 if (c != null) {
                     panel.add(c);
@@ -77,53 +79,114 @@ public class ProcessBoard {
         }
     }
 
+    /**
+     * Enable the <code>ProcessBoard</code>. Refreshes the board and shows it.
+     */
     public static synchronized void enable() {
         enabled = true;
         update();
     }
 
+    /**
+     * Disables the <code>ProcessBoard</code>. Refreshes the board and hides it.
+     */
     public static synchronized void disable() {
         enabled = false;
         update();
     }
 
+    /**
+     * Get whether or not the board is enabled.
+     *
+     * @return True if enabled.
+     */
     public static synchronized boolean isEnabled() {
         return enabled;
     }
 
+    /**
+     * Put a string onto the board.
+     *
+     * @see java.util.HashMap
+     * @param key
+     * @param value
+     */
     public static synchronized void putString(String key, String value) {
         strings.put(key, value);
         update();
     }
 
+    /**
+     * Get a string from the board.
+     *
+     * @param key
+     * @return
+     */
     public static synchronized String getString(String key) {
         return strings.get(key);
 
     }
 
+    /**
+     * Put an int onto the board.
+     *
+     * @see java.util.HashMap
+     * @param key
+     * @param value
+     */
     public static synchronized void putInt(String key, int value) {
         integers.put(key, value);
         update();
     }
 
+    /**
+     * Get an int from the board.
+     *
+     * @param key
+     * @return
+     */
     public static synchronized int getInt(String key) {
         return integers.get(key);
     }
 
+    /**
+     * Put a double onto the board.
+     *
+     * @param key
+     * @param value
+     */
     public static synchronized void putDouble(String key, double value) {
         doubles.put(key, value);
         update();
     }
 
+    /**
+     * Get an double from the board.
+     *
+     * @param key
+     * @return
+     */
     public static synchronized double getDouble(String key) {
         return doubles.get(key);
     }
 
+    /**
+     * Put a boolean onto the board.
+     *
+     * @param key
+     * @param value
+     */
     public static synchronized void putBoolean(String key, boolean value) {
         booleans.put(key, value);
         update();
     }
 
+    /**
+     * Get a boolean from the board.
+     *
+     * @param key
+     * @return
+     */
     public static synchronized boolean getBoolean(String key) {
         return booleans.get(key);
     }
