@@ -2,22 +2,6 @@ package processing;
 
 public class MultiProcess implements Runnable {
 
-    public static void main(String[] args) {
-        ProcessAction pa1 = new ProcessAction() {
-            @Override
-            public void execute() {
-                System.out.println("pa1");
-            }
-        };
-        ProcessAction pa2 = new ProcessAction() {
-            @Override
-            public void execute() {
-                System.out.println("pa2");
-            }
-        };
-        new MultiProcess(pa1, pa2).run();
-    }
-
     private final ProcessAction[] actions;
     public final boolean dualprocess;
 
