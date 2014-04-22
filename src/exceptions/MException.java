@@ -9,6 +9,7 @@ public class MException extends Exception {
     public static final MException STD_DEV_0_EXCEP = new MException("Standard deviation cannot be 0.");
     public static final MException PROPORTION_OUT_BOUNDS = new MException("A proportion cannot be between 0 and 1, inlusive.");
     public static final MException PROBABILITY_OUT_BOUNDS = new MException("A probability cannot be outisde of 0 and 1.");
+    public static final MException ARRAYS_NO_MATCH = new MException("Math arrays do not match.");
     
     private Object errorObj;
     private final String msg;

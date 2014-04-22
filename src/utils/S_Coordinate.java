@@ -4,17 +4,17 @@ package utils;
  * @version 0.3
  * @author Matthew Webb
  */
-public class Coordinate {
+public class S_Coordinate {
 
-    private int x, y;
+    private double x, y;
 
     /**
-     * Creates a new Coordinate object.
+     * Creates a new S_Coordinate object (double x and y).
      *
      * @param x The x coordinate.
      * @param y The y coordinate.
      */
-    public Coordinate(int x, int y) {
+    public S_Coordinate(double x, double y) {
         this.x = x;
         this.y = y;
     }
@@ -24,7 +24,7 @@ public class Coordinate {
      *
      * @return
      */
-    public int getX() {
+    public double getX() {
         return x;
     }
 
@@ -33,7 +33,7 @@ public class Coordinate {
      *
      * @return The y coordinate.
      */
-    public int getY() {
+    public double getY() {
         return y;
     }
 
@@ -42,7 +42,7 @@ public class Coordinate {
      *
      * @param x The x coordinate.
      */
-    public void setX(int x) {
+    public void setX(double x) {
         this.x = x;
     }
 
@@ -51,7 +51,7 @@ public class Coordinate {
      *
      * @param y The y coordinate.
      */
-    public void setY(int y) {
+    public void setY(double y) {
         this.y = y;
     }
 }

@@ -1,6 +1,6 @@
 package math.correlation;
 
-import utils.Coordinate;
+import utils.S_Coordinate;
 
 public class SlopeCorre {
 
@@ -26,11 +26,11 @@ public class SlopeCorre {
      * @param slope The slope of the expected curve.
      * @return The correlation.
      */
-    public static double correlateOne(Coordinate[] a, double slope) {
-        Coordinate[] exp = new Coordinate[a.length];
+    public static double correlateOne(S_Coordinate[] a, double slope) {
+        S_Coordinate[] exp = new S_Coordinate[a.length];
         for (int i = 0; i < exp.length; i++) {
             exp[i].setX(a[i].getX());
-            exp[i].setY((int) (slope * a[i].getX()));
+            exp[i].setY(slope * a[i].getX());
         }
 
         double toReturn = 0.0;

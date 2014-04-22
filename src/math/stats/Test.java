@@ -117,4 +117,24 @@ public class Test {
 
         return (x - mean) / stdDev;
     }
+
+    /**
+     * Gets the chi-squared statistic for an expected and observed array.
+     *
+     * @param observed The observed values.
+     * @param expected The expected values.
+     * @return The chi-squared test statistic.
+     * @throws MException Thrown if <code>observed.length != expected.length</code>.
+     */
+    public static double x2Test(double[] observed, double[] expected) throws MException {
+        double toReturn = 0.0;
+        if (observed.length == expected.length) {
+            for (int i = 0; i < observed.length && i < expected.length; i++) {
+                toReturn += Math.pow(observed[i] - expected[i], 2) / expected[i];
+            }
+        } else {
+            throw MException.ARRAYS_NO_MATCH;
+        }
+        return toReturn;
+    }
 }
