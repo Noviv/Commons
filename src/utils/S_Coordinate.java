@@ -27,7 +27,7 @@ public class S_Coordinate {
     public double getX() {
         return x;
     }
-
+    
     /**
      * Get the y coordinate.
      *

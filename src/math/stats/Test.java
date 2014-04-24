@@ -101,6 +101,10 @@ public class Test {
         return (valueOnDist > 0 ? p : 1 - p);
     }
 
+    public static double x2cdf(int df, double valueOnDist) {
+        
+    }
+
     /**
      * Calculate a z-score with a non-standard distribution.
      *
@@ -124,7 +128,8 @@ public class Test {
      * @param observed The observed values.
      * @param expected The expected values.
      * @return The chi-squared test statistic.
-     * @throws MException Thrown if <code>observed.length != expected.length</code>.
+     * @throws MException Thrown if
+     * <code>observed.length != expected.length</code>.
      */
     public static double x2Test(double[] observed, double[] expected) throws MException {
         double toReturn = 0.0;
@@ -136,5 +141,29 @@ public class Test {
             throw MException.ARRAYS_NO_MATCH;
         }
         return toReturn;
+    }
+
+    public static int c = 0;
+    
+    public static void main(String[] args) {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while (c < 100) {
+                    System.out.println("im outside of the main thred" + c);
+                    c++;
+                }
+            }
+        }).start();
+        
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while (c < 200) {
+                    System.out.println("im outside of the main thred" + c);
+                    c++;
+                }
+            }
+        }).start();
     }
 }
