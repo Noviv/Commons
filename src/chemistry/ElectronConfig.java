@@ -6,8 +6,8 @@ import java.util.ArrayList;
 public class ElectronConfig {
 
     private final String toSplit;
-    private String[] split;
-    private ArrayList<String> bases;
+    private final String[] split;
+    private final ArrayList<String> bases;
 
     /**
      * Create a new electron configuration.
