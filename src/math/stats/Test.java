@@ -1,7 +1,7 @@
 package math.stats;
 
 import exceptions.MException;
-import info.InfoSet;
+import datastructures.InfoSet;
 
 public class Test {
 
@@ -102,7 +102,7 @@ public class Test {
     }
 
     public static double x2cdf(int df, double valueOnDist) {
-        
+
     }
 
     /**
@@ -141,29 +141,5 @@ public class Test {
             throw MException.ARRAYS_NO_MATCH;
         }
         return toReturn;
-    }
-
-    public static int c = 0;
-    
-    public static void main(String[] args) {
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                while (c < 100) {
-                    System.out.println("im outside of the main thred" + c);
-                    c++;
-                }
-            }
-        }).start();
-        
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                while (c < 200) {
-                    System.out.println("im outside of the main thred" + c);
-                    c++;
-                }
-            }
-        }).start();
     }
 }

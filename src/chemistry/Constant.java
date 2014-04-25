@@ -1,6 +1,6 @@
 package chemistry;
 
-public enum ChemConstant {
+public enum Constant {
 
     /**
      * A null element.

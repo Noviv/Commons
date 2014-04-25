@@ -1,6 +1,6 @@
 package system;
 
-import info.InfoSet;
+import datastructures.InfoSet;
 
 public class SystemManipulator {
 

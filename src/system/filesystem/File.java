@@ -27,6 +27,11 @@ public class File extends java.io.File {
     public String read() {
         try {
             Scanner file = new Scanner(this);
+            String toReturn = "";
+            while (file.hasNext()) {
+                toReturn += file.nextLine();
+            }
+            return toReturn;
         } catch (FileNotFoundException e) {
         }
         return "";

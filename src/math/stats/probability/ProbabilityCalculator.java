@@ -1,6 +1,6 @@
 package math.stats.probability;
 
-import info.InfoSet;
+import datastructures.InfoSet;
 
 public class ProbabilityCalculator {
     public static InfoSet onePropZTest() {

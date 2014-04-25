@@ -1,6 +1,6 @@
 package chemistry;
 
-import chemistry.ChemConstant.ElementClass;
+import chemistry.Constant.ElementClass;
 import chemistry.exception.ChemException;
 import java.util.HashMap;
 

@@ -2,7 +2,6 @@ package math.stats;
 
 import exceptions.MException;
 import java.util.Random;
-import utils.Constant;
 
 /**
  * @version 0.3
