@@ -44,7 +44,7 @@ public final class Prompt {
         } else if (options[0].equals("get")) {
             System.out.println(variables.get(options[1].toCharArray()[0]));
         } else if (Command.commandCalls.contains(options[0])) {
-            Command.commands.get(Command.commandCalls.indexOf(options[0])).execute(options);
+            Command.commands.get(Command.commandCalls.indexOf(options[0])).execute((Object[]) options);
         } else {
             Error.err(Error.COMMAND_NO_INSTANCE);
         }

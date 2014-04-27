@@ -102,7 +102,7 @@ public class Test {
     }
 
     public static double x2cdf(int df, double valueOnDist) {
-
+        return 0.0;
     }
 
     /**
