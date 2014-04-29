@@ -46,6 +46,23 @@ public class ProcessBoard {
         frame.setVisible(false);
     }
 
+    /**
+     * Set the <code>ProcessBoard</code>'s default close operation. Will throw
+     * <code>IllefalArgumentException</code> if not a JFrame constant.
+     *
+     * @param closeOperation The close operation <code>int</code> constant.s
+     */
+    public static void setCloseOperation(int closeOperation) {
+        if (closeOperation != JFrame.DO_NOTHING_ON_CLOSE
+                && closeOperation != JFrame.HIDE_ON_CLOSE
+                && closeOperation != JFrame.DISPOSE_ON_CLOSE
+                && closeOperation != JFrame.EXIT_ON_CLOSE) {
+            throw new IllegalArgumentException("Not a valid close operation.");
+        }
+
+        frame.setDefaultCloseOperation(closeOperation);
+    }
+
     private static void update() {
         if (enabled) {
             panel.removeAll();
@@ -189,5 +206,9 @@ public class ProcessBoard {
      */
     public static synchronized boolean getBoolean(String key) {
         return booleans.get(key);
+    }
+
+    public static synchronized void putComponent(Component c) {
+        frame.add(c);
     }
 }
