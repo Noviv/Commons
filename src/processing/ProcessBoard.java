@@ -63,6 +63,27 @@ public class ProcessBoard {
         frame.setDefaultCloseOperation(closeOperation);
     }
 
+    /**
+     * Set the size of the <code>ProcessBoard</code>.
+     *
+     * @param width Width.
+     * @param height Height.
+     */
+    public static void setSize(int width, int height) {
+        frame.setSize(width, height);
+    }
+    
+    public static void clearAll(boolean clearComps) {
+        strings.clear();
+        integers.clear();
+        doubles.clear();
+        booleans.clear();
+        if (clearComps) {
+            comps.clear();
+        }
+        update();
+    }
+
     private static void update() {
         if (enabled) {
             panel.removeAll();
