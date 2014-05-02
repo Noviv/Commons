@@ -2,13 +2,15 @@ package live.network;
 
 import exceptions.CreationException;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.net.Socket;
 import live.network.config.IP;
 
-public class Network {
+public final class Network {
 
-    private String name;
-    private NetworkBuilder nb;
+    private final String name;
+    private final NetworkBuilder nb;
 
     public Network(String name, NetworkBuilder nb) {
         this.name = name;
@@ -34,6 +36,14 @@ public class Network {
             } catch (IOException ex) {
             }
         }
+        
+        public InputStream getIS() throws IOException {
+            return socket.getInputStream();
+        }
+        
+        public OutputStream getOS() throws IOException {
+            return socket.getOutputStream();
+        }
     }
 
     public class NetworkBuilder {
@@ -49,8 +59,10 @@ public class Network {
         }
 
         public void build(Network n) {
-            for (NetworkComponent comp : comps) {
-                
+            for (int i = 0; i < comps.length; i++) {
+                if (i == 0) {
+                    ((NetworkHead) comps[i]);
+                }
             }
         }
     }
