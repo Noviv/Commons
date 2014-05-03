@@ -4,6 +4,7 @@ import exceptions.CreationException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.net.ServerSocket;
 import java.net.Socket;
 import live.network.config.IP;
 
@@ -28,11 +29,13 @@ public final class Network {
         public IP ip;
 
         private Socket socket;
+        private ServerSocket ss;
 
         public NetworkHead(IP ip) {
             this.ip = ip;
             try {
                 socket = new Socket(ip.host.getAsString(), ip.port.getAsInt());
+                ss = new ServerSocket();
             } catch (IOException ex) {
             }
         }
@@ -43,6 +46,12 @@ public final class Network {
         
         public OutputStream getOS() throws IOException {
             return socket.getOutputStream();
+        }
+        
+        public void start() {
+            try {
+                ss.accept();
+            } catch (IOException e) {}
         }
     }
 
@@ -61,7 +70,9 @@ public final class Network {
         public void build(Network n) {
             for (int i = 0; i < comps.length; i++) {
                 if (i == 0) {
-                    ((NetworkHead) comps[i]);
+                    ((NetworkHead) comps[i]).start();
+                } else {
+                    
                 }
             }
         }
