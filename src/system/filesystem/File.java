@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class File extends java.io.File {
 
     private PrintWriter pw;
+    private Scanner in;
 
     /**
      * Commons rendition of {@link java.io.File}.
@@ -17,6 +18,7 @@ public class File extends java.io.File {
         super(path);
         try {
             pw = new PrintWriter(this);
+            in = new Scanner(this);
         } catch (FileNotFoundException e) {
         }
     }
@@ -41,28 +43,18 @@ public class File extends java.io.File {
      * @return String of the entire file.
      */
     public String read() {
-        try {
-            Scanner file = new Scanner(this);
-            String toReturn = "";
-            while (file.hasNext()) {
-                toReturn += file.nextLine();
-            }
-            return toReturn;
-        } catch (FileNotFoundException e) {
+        String toReturn = "";
+        while (in.hasNext()) {
+            toReturn += in.nextLine();
         }
-        return "";
+        return toReturn;
     }
 
-    public String[] readFromRegex(String regex) {
-        try {
-            Scanner file = new Scanner(this);
-            java.util.ArrayList<String> toReturn = new java.util.ArrayList<>();
-
-        } catch (FileNotFoundException e) {
-        }
-        return null;
-    }
-
+    /**
+     * Get the <code>PrintWriter</code> associated with this file.
+     *
+     * @return The <code>Writer</code> that can print to this file.
+     */
     public PrintWriter getWriter() {
         return pw;
     }
