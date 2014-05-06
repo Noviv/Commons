@@ -24,12 +24,6 @@ public class Function {
         parseFunction(toParse);
     }
 
-    /**
-     * Reads the function.
-     *
-     * @param s Function as a string.
-     * @throws exceptions.MException Math exception.
-     */
     private void parseFunction(String s) throws MException {
         if (s.contains("=")) {
             preE = s.substring(0, s.indexOf("="));
