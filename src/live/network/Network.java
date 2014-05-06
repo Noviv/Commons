@@ -1,6 +1,6 @@
 package live.network;
 
-import exceptions.CreationException;
+import live.exceptions.CreationException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;

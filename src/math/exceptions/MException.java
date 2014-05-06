@@ -1,4 +1,4 @@
-package exceptions;
+package math.exceptions;
 
 /**
  * @version 0.3

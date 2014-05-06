@@ -1,6 +1,6 @@
 package live;
 
-import exceptions.CreationException;
+import live.exceptions.CreationException;
 import java.awt.Component;
 import java.awt.Point;
 import java.awt.event.KeyEvent;

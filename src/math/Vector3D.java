@@ -1,6 +1,6 @@
 package math;
 
-import exceptions.MException;
+import math.exceptions.MException;
 
 /**
  * @version 0.3

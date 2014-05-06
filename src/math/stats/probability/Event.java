@@ -1,6 +1,6 @@
 package math.stats.probability;
 
-import exceptions.MException;
+import math.exceptions.MException;
 
 public class Event {
 

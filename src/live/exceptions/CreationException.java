@@ -1,4 +1,4 @@
-package exceptions;
+package live.exceptions;
 
 public class CreationException extends Exception {
     
