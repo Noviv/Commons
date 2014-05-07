@@ -88,7 +88,7 @@ public class LiveWindow extends JFrame implements KeyListener, MouseListener, Mo
     @Override
     public void mouseMoved(MouseEvent e) {
         if (mousePressed) {
-            livecomps.get(livecomps.indexOf(componentMovementTracker.objA)).setCoordinateLocation(componentMovementTracker.objB.x, componentMovementTracker.objB.y);
+            livecomps.get(livecomps.indexOf(componentMovementTracker.a)).setCoordinateLocation(componentMovementTracker.b.x, componentMovementTracker.b.y);
         }
     }
 }

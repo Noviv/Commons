@@ -60,11 +60,11 @@ public class LinkedFile extends File {
     }
 
     public File get() {
-        return pNodes[currentIndex];
+        return (singleNode ? pNode : pNodes[currentIndex]);
     }
 
-    public String getCD() {
-        return pNodes[currentIndex].getAbsolutePath();
+    public String getDir() {
+        return (singleNode ? pNode.getAbsolutePath() : pNodes[currentIndex].getAbsolutePath());
     }
 
     /**
