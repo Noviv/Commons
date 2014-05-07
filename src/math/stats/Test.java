@@ -8,6 +8,15 @@ public class Test {
     private Test() {
     }
 
+    /**
+     * Test a one proportion z-test using parameters.
+     *
+     * @param p0
+     * @param x
+     * @param n
+     * @param type
+     * @return
+     */
     public static InfoSet onePropZTest(double p0, int x, int n, PropType type) {
         InfoSet msgs = new InfoSet();
         if (type == PropType.NOT_EQUAL_P0) {

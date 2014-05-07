@@ -2,14 +2,18 @@ package datastructures;
 
 public final class Ternary {
 
-    private int val;
+    private TernaryCase val;
 
-    public Ternary() {
-
+    public Ternary(TernaryCase value) {
+        val = value;
     }
 
-    public int get() {
+    public TernaryCase get() {
         return val;
+    }
+
+    public void set(TernaryCase value) {
+        val = value;
     }
 
     public enum TernaryCase {

@@ -2,6 +2,7 @@ package math.stats;
 
 import math.exceptions.MException;
 import java.util.Random;
+import math.stats.Constants.Constant;
 
 /**
  * @version 0.3
