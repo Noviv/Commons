@@ -19,8 +19,4 @@ public class Natives {
         String str = nativeFoo();
         System.out.println(str);
     }
-    public static void main(String[] args) {
-        (new Natives()).print();
-
-    }
 }
