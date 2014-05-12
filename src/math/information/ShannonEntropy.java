@@ -1,4 +1,4 @@
-package math.entropy;
+package math.information;
 
 import java.util.HashMap;
 import java.util.Map;

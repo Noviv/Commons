@@ -27,6 +27,11 @@ public class GenericKeyVal<A, B> {
         this.b = obj;
     }
 
+    /**
+     * Get whether or not these objects are the same.
+     *
+     * @return Iff the objects are the same.
+     */
     public boolean same() {
         return a != null && b != null && a.equals(b);
     }

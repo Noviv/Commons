@@ -1,5 +1,7 @@
 package utils;
 
+import static utils.Print.p;
+
 public class F_Print {
 
     private F_Print() {
@@ -21,6 +23,6 @@ public class F_Print {
             alias = alias.replace("%" + currentChar, "" + obj);
             currentChar++;
         }
-        System.out.println(alias);
+        p(alias);
     }
 }

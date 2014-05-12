@@ -5,8 +5,11 @@ import java.util.Set;
 
 public class InfoSet {
 
-    private HashMap<String, Object> obj = new HashMap<>();
+    private final HashMap<String, Object> obj;
 
+    public InfoSet() {
+        obj = new HashMap<>();
+    }
     /**
      * Add a value to the <code>InfoSet</code>.
      *
@@ -27,6 +30,11 @@ public class InfoSet {
         return obj.get(key);
     }
 
+    /**
+     * Get the keyset for the <code>InfoSet</code>
+     *
+     * @return <code>Set</code> of strings.
+     */
     public Set<String> getKeys() {
         return obj.keySet();
     }

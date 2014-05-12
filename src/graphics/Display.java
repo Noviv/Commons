@@ -1,6 +1,5 @@
 package graphics;
 
-import java.awt.Component;
 import java.awt.Frame;
 
 public class Display {
@@ -24,11 +23,5 @@ public class Display {
 
     public static void setSize(int width, int height) {
         mine.setSize(width, height);
-    }
-
-    public static void addComponent(Component... cAry) {
-        for (Component c : cAry) {
-            mine.add(c);
-        }
     }
 }
