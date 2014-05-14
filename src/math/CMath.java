@@ -27,4 +27,18 @@ public class CMath {
     public static double logBase(double base, double num, double exponent) {
         return logBase(base, Math.pow(num, exponent));
     }
+
+    /**
+     * Take the cube root of a number
+     *
+     * @param toCRoot The number to cube root.
+     * @return The cube root of toCRoot.
+     */
+    public static double cubeRoot(double toCRoot) {
+        return baseRoot(toCRoot, 3);
+    }
+
+    public static double baseRoot(double toRoot, int base) {
+        return Math.pow(toRoot, 1.0 / base);
+    }
 }
