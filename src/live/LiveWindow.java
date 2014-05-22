@@ -15,9 +15,9 @@ import datastructures.GenericKeyVal;
 
 public class LiveWindow extends JFrame implements KeyListener, MouseListener, MouseMotionListener {
 
-    private ArrayList<LiveComponent> livecomps;
+    private final ArrayList<LiveComponent> livecomps;
     private boolean mousePressed = false;
-    private GenericKeyVal<LiveComponent, Point> componentMovementTracker;
+    private final GenericKeyVal<LiveComponent, Point> componentMovementTracker;
 
     public LiveWindow(int width, int height, boolean minimized, String title) {
         livecomps = new ArrayList<>();
