@@ -72,7 +72,7 @@ public class ProcessBoard {
     public static void setSize(int width, int height) {
         frame.setSize(width, height);
     }
-    
+
     public static void clearAll(boolean clearComps) {
         strings.clear();
         integers.clear();

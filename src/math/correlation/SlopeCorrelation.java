@@ -2,9 +2,9 @@ package math.correlation;
 
 import utils.S_Coordinate;
 
-public class SlopeCorre {
+public class SlopeCorrelation {
 
-    private SlopeCorre() {
+    private SlopeCorrelation() {
     }
 
     public static double correlateData(double[] a1, double[] a2) {
