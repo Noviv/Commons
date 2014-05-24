@@ -1,7 +1,7 @@
 package math.correlation;
 
 import cInterfaces.S_Equatable;
-import math.Vector;
+import datastructures.DataVector;
 
 public class VectorCorrelation implements S_Equatable {
 
