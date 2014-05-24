@@ -6,7 +6,7 @@ import math.exceptions.MException;
  * @version 0.3
  * @author Matthew Webb
  */
-public class Vector3D {
+public class Vector {
 
     /**
      * The i axis of the vector.
@@ -37,7 +37,7 @@ public class Vector3D {
      * @param endY Ending y coordinate.
      * @param endZ Ending z coordinate.
      */
-    public Vector3D(int begX, int begY, int begZ, int endX, int endY, int endZ) {
+    public Vector(int begX, int begY, int begZ, int endX, int endY, int endZ) {
         terms = new String[2];
         terms[0] = "" + (endX - begX) + "i";
         terms[1] = "" + (endY - begY) + "j";
@@ -58,7 +58,7 @@ public class Vector3D {
      * @param ijkForm The vector in vector notation (ai + bj + ck).
      * @throws exceptions.MException
      */
-    public Vector3D(String ijkForm) throws MException {
+    public Vector(String ijkForm) throws MException {
         vectorNotation = ijkForm;
 
         if (ijkForm.contains("i") && ijkForm.contains("j") && ijkForm.contains("k")) {
@@ -70,7 +70,7 @@ public class Vector3D {
 
     /**
      * Gets a specific term of the vector, from vector notation using a given
-     * axis. It is suggested that you use the constants in the Vector3D class.
+     * axis. It is suggested that you use the constants in the Vector class.
      *
      * @param axis Which term (i, j, or k) will be returned.
      * @param include Determines whether or not to include the i, j, or k.
