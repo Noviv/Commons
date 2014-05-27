@@ -56,7 +56,7 @@ public class Vector {
      * Creates a new GVector3D object.
      *
      * @param ijkForm The vector in vector notation (ai + bj + ck).
-     * @throws exceptions.MException
+     * @throws MException Thrown if your String does not contain i, j, or k.
      */
     public Vector(String ijkForm) throws MException {
         vectorNotation = ijkForm;

@@ -1,7 +1,7 @@
 package evolutionary;
 
 public class EvolutionaryObject {
-    public EvolutionaryObject() {
+    public EvolutionaryObject(String UID) {
         
     }
 }
