@@ -91,10 +91,4 @@ public class LiveWindow extends JFrame implements KeyListener, MouseListener, Mo
             livecomps.get(livecomps.indexOf(componentMovementTracker.a)).setCoordinateLocation(componentMovementTracker.b.x, componentMovementTracker.b.y);
         }
     }
-    
-    public static void main(String[] args) {
-        int x = 101010;
-        int y = 1;
-        System.out.println(x >>>= y);
-    }
 }
