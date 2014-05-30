@@ -1,7 +1,14 @@
 package evolutionary;
 
 public class EvolutionaryObject {
-    public EvolutionaryObject(String UID) {
-        
+
+    private final String UID;
+
+    public EvolutionaryObject(String UID, Object ID) {
+        this.UID = UID;
+    }
+    
+    public String getUID() {
+        return UID;
     }
 }

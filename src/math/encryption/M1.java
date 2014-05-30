@@ -1,9 +1,10 @@
 package math.encryption;
 
 public class M1 {
+
     private M1() {
     }
-    
+
     public static String hash(String base) {
         String encrypted = "";
         for (int x = 0; x < base.length(); x++) {
@@ -11,11 +12,11 @@ public class M1 {
         }
         return encrypted;
     }
-    
+
     public static String doubleHash(String base) {
         return hash(hash(base));
     }
-    
+
     public static String iterativeHash(String base, int n) {
         String toReturn = base;
         for (int i = 0; i < n; i++) {
