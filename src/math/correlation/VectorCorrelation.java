@@ -1,7 +1,7 @@
 package math.correlation;
 
 import cInterfaces.S_Equatable;
-import datastructures.DataVector;
+import datastructures.advanced.DataVector;
 import math.exceptions.MException;
 import utils.Mode;
 

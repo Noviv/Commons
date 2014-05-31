@@ -1,5 +1,6 @@
-package datastructures;
+package datastructures.advanced;
 
+import datastructures.Ternary;
 import datastructures.advanced.AdvancedDataException;
 import math.Vector;
 import math.exceptions.MException;

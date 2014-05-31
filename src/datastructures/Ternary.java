@@ -2,7 +2,7 @@ package datastructures;
 
 import cInterfaces.Equatable;
 
-public final class Ternary implements Equatable {
+public class Ternary implements Equatable {
 
     private TernaryCase val;
 

@@ -3,7 +3,7 @@ package graphics.fractal;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.util.ArrayList;
-//DOES NOT WORK
+
 public class DynamicTreeFractal {
 
     private DynamicTreeFractal() {

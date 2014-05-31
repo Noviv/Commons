@@ -1,4 +1,4 @@
-package datastructures;
+package datastructures.advanced;
 
 import datastructures.advanced.AdvancedDataException;
 import math.CMath;
