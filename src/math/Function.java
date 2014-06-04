@@ -23,6 +23,10 @@ public class Function {
         toParse = function.toLowerCase().replace(" ", "").trim();
         parseFunction(toParse);
     }
+    
+    public void func0(double x) {
+        
+    }
 
     private void parseFunction(String s) throws MException {
         if (s.contains("=")) {

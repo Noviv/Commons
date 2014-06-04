@@ -61,9 +61,9 @@ public class CMath {
         }
 
         try {
-            Integer.parseInt(("" + obj).replace(" ", "").toLowerCase());
+            Integer.parseInt(("" + obj).replace(" ", "").toLowerCase().substring(0, ("" + obj).indexOf(".")));
             return true;
-        } catch (NumberFormatException e) {
+        } catch (Exception e) {
         }
 
         return false;

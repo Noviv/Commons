@@ -1,4 +1,4 @@
-package datastructures.advanced;
+package datastructures.exceptions;
 
 import utils.Erronous;
 

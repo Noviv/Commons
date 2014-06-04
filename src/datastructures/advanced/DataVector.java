@@ -1,7 +1,7 @@
 package datastructures.advanced;
 
 import datastructures.Ternary;
-import datastructures.advanced.AdvancedDataException;
+import datastructures.exceptions.AdvancedDataException;
 import math.Vector;
 import math.exceptions.MException;
 import utils.Mode;
