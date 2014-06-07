@@ -4,7 +4,7 @@ package utils;
  * @version 0.3
  * @author Matthew Webb
  */
-public class Coordinate {
+public final class Coordinate {
 
     private int x, y;
 

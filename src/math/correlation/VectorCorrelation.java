@@ -1,22 +1,13 @@
 package math.correlation;
 
 import cInterfaces.S_Equatable;
-import datastructures.advanced.DataVector;
-import math.exceptions.MException;
-import utils.Mode;
 
 public class VectorCorrelation implements S_Equatable {
 
     private double vCorrelation = 0.0;
-    private DataVector searchVectorX, searchVectorY, searchVectorZ;
 
     public VectorCorrelation() {
-        try {
-            searchVectorX = new DataVector(Mode.BOUNCE, true);
-            searchVectorY = new DataVector(Mode.BOUNCE, true);
-            searchVectorZ = new DataVector(Mode.BOUNCE, true);
-        } catch (MException e) {
-        }
+
     }
 
     public double getVectorCorrelationCoefficient() {

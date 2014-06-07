@@ -1,4 +1,4 @@
-package utils;
+package datastructures.advanced;
 
 public enum Mode {
     GRAB,

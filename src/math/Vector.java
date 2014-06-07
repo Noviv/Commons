@@ -23,7 +23,7 @@ public class Vector {
      */
     public static final String AXIS_K = "k";
 
-    private String vectorNotation;
+    private final String vectorNotation;
     private int begX, begY, begZ, endX, endY, endZ;
     private String[] terms;
 
@@ -53,7 +53,7 @@ public class Vector {
     }
 
     /**
-     * Creates a new GVector3D object.
+     * Creates a new Vector object for a unit vector.
      *
      * @param ijkForm The vector in vector notation (ai + bj + ck).
      * @throws MException Thrown if your String does not contain i, j, or k.
@@ -66,6 +66,13 @@ public class Vector {
         } else {
             throw new MException("Not in vector notation (or missing i, j, or k).");
         }
+
+        begX = -1;
+        begY = -1;
+        begZ = -1;
+        endX = -1;
+        endY = -1;
+        endZ = -1;
     }
 
     /**

@@ -4,7 +4,7 @@ package utils;
  * @version 0.3
  * @author Matthew Webb
  */
-public class S_Coordinate {
+public final class S_Coordinate {
 
     private double x, y;
 

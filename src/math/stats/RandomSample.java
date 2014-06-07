@@ -4,10 +4,6 @@ import math.exceptions.MException;
 import java.util.Random;
 import math.stats.Constants.Constant;
 
-/**
- * @version 0.3
- * @author Matthew Webb
- */
 public class RandomSample {
 
     private boolean replacement;

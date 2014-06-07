@@ -2,7 +2,7 @@ package datastructures;
 
 import cInterfaces.Equatable;
 
-public class Ternary extends Number implements Equatable {
+public class Ternary implements Equatable {
 
     private TernaryCase val;
 
@@ -35,26 +35,6 @@ public class Ternary extends Number implements Equatable {
         } else {
             return false;
         }
-    }
-
-    @Override
-    public int intValue() {
-        return 0;
-    }
-
-    @Override
-    public long longValue() {
-        return 0L;
-    }
-
-    @Override
-    public float floatValue() {
-        return 0f;
-    }
-
-    @Override
-    public double doubleValue() {
-        return 0.0;
     }
 
     public enum TernaryCase {

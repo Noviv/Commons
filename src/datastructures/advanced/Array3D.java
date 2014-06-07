@@ -3,20 +3,18 @@ package datastructures.advanced;
 import datastructures.Ternary;
 import datastructures.exceptions.AdvancedDataException;
 import datastructures.exceptions.ConstraintException;
-import math.CMath;
 
 public class Array3D<E> {
 
     private int size, sideLength;
     private Object[][][] array;
+    private final int maxSeconds;
 
-    public Array3D(int size) throws AdvancedDataException {
-        if (!CMath.isInt(CMath.cubeRoot(size / 1.0))) {
-            throw new AdvancedDataException("Array3D must be a cube (size = side ^ 3)!");
-        }
-        this.size = size;
-        sideLength = (int) CMath.cubeRoot(size / 1.0);
-        array = new Object[sideLength][sideLength][sideLength];
+    public Array3D(int sideLength, int maxSecProcessing) throws AdvancedDataException {
+        size = sideLength * sideLength * sideLength;
+        this.sideLength = sideLength;
+        array = (E[][][]) new Object[sideLength][sideLength][sideLength];
+        maxSeconds = maxSecProcessing;
     }
 
     public E put(E obj, int x, int y, int z) throws ConstraintException {
@@ -47,6 +45,17 @@ public class Array3D<E> {
         return temp;
     }
 
+    public boolean needsAlgorithmicProcessing() {
+        long start = System.currentTimeMillis();
+        for (int i = 0; i < array.length / 10; i++) {
+        }
+        return (start - System.currentTimeMillis() > maxSeconds * 1000);
+    }
+    
+    public E[][][] iterator() {
+        return (E[][][]) array;
+    }
+    
     public class DataPoint {
 
         public final Integer x, y, z;
