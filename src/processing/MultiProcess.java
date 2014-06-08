@@ -42,7 +42,7 @@ public class MultiProcess implements Runnable {
         if (actions != null) {
             for (ProcessAction a : actions) {
                 if (a != null) {
-                    a.execute();
+                    a.run();
                 }
             }
         }

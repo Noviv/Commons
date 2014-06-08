@@ -7,11 +7,9 @@ import datastructures.InfoSet;
  *
  * @author Matthew
  */
-public abstract class ProcessAction {
+public abstract class ProcessAction implements Runnable {
 
     public InfoSet info = null;
-
-    public abstract void execute();
 
     /**
      * Add a relative <code>InfoSet</code> to the action, in case you want

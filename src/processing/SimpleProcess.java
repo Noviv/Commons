@@ -33,7 +33,12 @@ public class SimpleProcess implements Runnable {
         if (daemon) {
         } else {
             started = true;
-            pa.execute();
+            pa.run();
         }
+    }
+
+    public static void runInBackground(ProcessAction sp) {
+        Thread th = new Thread(sp);
+        th.start();
     }
 }
