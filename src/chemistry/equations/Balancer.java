@@ -2,6 +2,12 @@ package chemistry.equations;
 
 import chemistry.exception.ChemException;
 
+/**
+ * A chemical equation balancer. DOES NOT WORK AS INTENDED.
+ *
+ * @author Matthew Webb
+ * @version 1.0
+ */
 public final class Balancer {
 
     private Balancer() {

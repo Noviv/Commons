@@ -63,7 +63,7 @@ public class CMath {
         try {
             Integer.parseInt(("" + obj).replace(" ", "").toLowerCase().substring(0, ("" + obj).indexOf(".")));
             return true;
-        } catch (Exception e) {
+        } catch (NumberFormatException e) {
         }
 
         return false;

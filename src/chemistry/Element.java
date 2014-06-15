@@ -2,6 +2,12 @@ package chemistry;
 
 import chemistry.Constant.ElementClass;
 
+/**
+ * An element, usually from the periodic table.
+ *
+ * @author Matthew Webb
+ * @version 1.0
+ */
 public class Element {
 
     public final String symbol;

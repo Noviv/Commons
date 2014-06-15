@@ -5,6 +5,12 @@ import command.printerrors.Error;
 import java.util.HashMap;
 import javax.swing.filechooser.FileSystemView;
 
+/**
+ * The System.out command prompt.
+ *
+ * @author Matthew Webb
+ * @version 1.0
+ */
 public final class Prompt {
 
     private final String baseDirec = FileSystemView.getFileSystemView().getHomeDirectory().getAbsolutePath();
@@ -18,6 +24,9 @@ public final class Prompt {
     private String[] cmdSplit;
     private boolean firstLine = true;
 
+    /**
+     * Create a new command prompt.
+     */
     public Prompt() {
         variables = new HashMap<>();
         input = new Scanner(System.in);
@@ -29,6 +38,11 @@ public final class Prompt {
         }
     }
 
+    /**
+     * Check the options of a command.
+     *
+     * @param options All options avaliable.
+     */
     public void checkOptions(String[] options) {
         if (options[0].equals("store")) {
             if (options.length > 2) {
@@ -50,6 +64,11 @@ public final class Prompt {
         }
     }
 
+    /**
+     * Get the current command.
+     *
+     * @return The command call (may not be valid).
+     */
     public String getCmd() {
         if (firstLine) {
             System.out.print(baseDirec + " --> ");

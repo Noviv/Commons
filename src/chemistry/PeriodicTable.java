@@ -4,11 +4,17 @@ import chemistry.Constant.ElementClass;
 import chemistry.exception.ChemException;
 import java.util.HashMap;
 
+/**
+ * The periodic table, unfinished.
+ *
+ * @author Matthew Webb
+ * @version 1.0
+ */
 public class PeriodicTable {
 
     private static final PeriodicTable pt = new PeriodicTable();
 
-    private HashMap<Integer, Element> elements;
+    private final HashMap<Integer, Element> elements;
 
     private PeriodicTable() {
         elements = new HashMap<>();

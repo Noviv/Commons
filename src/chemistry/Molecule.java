@@ -3,6 +3,12 @@ package chemistry;
 import chemistry.exception.ChemException;
 import java.util.ArrayList;
 
+/**
+ * A molecule.
+ *
+ * @author Matthew Webb
+ * @see 1.0
+ */
 public class Molecule {
 
     private ArrayList<MoleculeBase> molecule;

@@ -3,6 +3,12 @@ package chemistry;
 import chemistry.exception.ChemException;
 import java.util.ArrayList;
 
+/**
+ * Electron configuration of an element.
+ *
+ * @author Matthew Webb
+ * @version 1.0
+ */
 public class ElectronConfig {
 
     private final String toSplit;
@@ -50,7 +56,8 @@ public class ElectronConfig {
     }
 
     /**
-     * Get an actual base of the electron configuration (from the inputted string).
+     * Get an actual base of the electron configuration (from the inputted
+     * string).
      *
      * @param index The index of the orbital.
      * @return The base as a <code>String</code>.
@@ -60,7 +67,8 @@ public class ElectronConfig {
     }
 
     /**
-     * Gets the split base, as in the partial base of the 
+     * Gets the split base, as in the partial base of the
+     *
      * @param index
      * @return
      */

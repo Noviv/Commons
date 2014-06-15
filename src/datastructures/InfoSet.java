@@ -3,13 +3,23 @@ package datastructures;
 import java.util.HashMap;
 import java.util.Set;
 
+/**
+ * A set of strings the contain information.
+ *
+ * @author Matthew Webb
+ * @version 1.0
+ */
 public class InfoSet {
 
     private final HashMap<String, Object> obj;
 
+    /**
+     * Create a new <code>InfoSet</code>.
+     */
     public InfoSet() {
         obj = new HashMap<>();
     }
+
     /**
      * Add a value to the <code>InfoSet</code>.
      *
