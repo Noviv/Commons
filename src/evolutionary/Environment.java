@@ -8,21 +8,31 @@ public class Environment implements Runnable {
 
     private final ArrayList<EvolutionaryObject> objects;
     private ArrayList<EvolutionaryParameter> params;
+    private Object params0;
 
     private Model evolModel;
 
     private boolean inEvolution;
     private int evolutionIteration;
 
-    public Environment() {
+    public Environment(EvolutionaryLevel el) {
         inEvolution = false;
         evolutionIteration = 0;
         objects = new ArrayList<>();
         params = new ArrayList<>();
+        params0 = null;
     }
 
-    public void loadParams(List<EvolutionaryParameter> params) {
-        this.params = (ArrayList) params;
+    public void load(EvolutionaryObject... inhabitants) {
+
+    }
+
+    public void loadParams(List<EvolutionaryParameter> params, boolean needsOrdered) {
+        if (needsOrdered) {
+            params0 = params;
+        } else {
+            this.params = (ArrayList) params;
+        }
     }
 
     public boolean addModel(Model m) {
@@ -46,5 +56,12 @@ public class Environment implements Runnable {
     public void run() {
         inEvolution = true;
         //this is where shit gets hard
+    }
+
+    public enum EvolutionaryLevel {
+
+        LOW,
+        LOW_PROCESSING,
+        HIGH
     }
 }
