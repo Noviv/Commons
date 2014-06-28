@@ -1,6 +1,6 @@
 package system;
 
-import datastructures.InfoSet;
+import data.datastructures.InfoSet;
 import java.lang.management.ManagementFactory;
 
 public class SystemManipulator {

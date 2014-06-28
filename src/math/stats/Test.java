@@ -1,7 +1,7 @@
 package math.stats;
 
 import math.exceptions.MException;
-import datastructures.InfoSet;
+import data.datastructures.InfoSet;
 
 public class Test {
 

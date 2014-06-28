@@ -1,6 +1,11 @@
 package math;
 
-public class CMath {
+/**
+ * A static class containing things that are not in Java's Math class.
+ *
+ * @author Matthew Webb
+ */
+public final class CMath {
 
     private CMath() {
     }

@@ -1,6 +1,6 @@
 package processing;
 
-import datastructures.InfoSet;
+import data.datastructures.InfoSet;
 
 /**
  * A user-defined action that is executed in Commons processing.

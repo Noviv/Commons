@@ -6,7 +6,7 @@ import math.exceptions.MException;
  * @version 0.3
  * @author Matthew Webb
  */
-public class Function {
+public class Function extends Function2D {
 
     private final String toParse;
     private String preE, postE;
@@ -22,10 +22,6 @@ public class Function {
     public Function(String function) throws MException {
         toParse = function.toLowerCase().replace(" ", "").trim();
         parseFunction(toParse);
-    }
-    
-    public void func0(double x) {
-        
     }
 
     private void parseFunction(String s) throws MException {
@@ -62,12 +58,7 @@ public class Function {
         return terms;
     }
 
-    /**
-     * Calculates y for a given x. Fixed multiplication bug in v0.3.
-     *
-     * @param x The x value of the function.
-     * @return The y value of the function for a given x.
-     */
+    @Override
     public double func(double x) {
         double temp = 0, y = 0;
 
@@ -120,10 +111,5 @@ public class Function {
      */
     public void printFullFunc(int x) {
         System.out.println("For the equation " + toParse + " an x of " + x + " is " + func(x));
-    }
-
-    @Override
-    public String toString() {
-        return "Function is " + toParse + " @" + Integer.toHexString(super.hashCode());
     }
 }

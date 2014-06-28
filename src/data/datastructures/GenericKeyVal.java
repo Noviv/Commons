@@ -1,4 +1,4 @@
-package datastructures;
+package data.datastructures;
 
 /**
  * A one-term {@link java.util.HashMap}.

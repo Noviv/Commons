@@ -11,7 +11,7 @@ import java.awt.event.MouseMotionListener;
 import java.util.ArrayList;
 import javax.swing.JFrame;
 import live.components.LiveComponent;
-import datastructures.GenericKeyVal;
+import data.datastructures.GenericKeyVal;
 
 public class LiveWindow extends JFrame implements KeyListener, MouseListener, MouseMotionListener {
 
