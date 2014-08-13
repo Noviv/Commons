@@ -2,7 +2,6 @@ package live.network;
 
 import data.databuffer.BufferAlgorithm;
 import data.databuffer.DataBuffer;
-import live.exceptions.CreationException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -94,11 +93,11 @@ public final class Network {
 
         private final NetworkComponent[] comps;
 
-        public NetworkBuilder(NetworkComponent... nbcs) throws CreationException {
+        public NetworkBuilder(NetworkComponent... nbcs) throws Exception {
             if (nbcs[0] instanceof NetworkHead) {
                 comps = nbcs;
             } else {
-                throw new CreationException("A NetworkHead is required first to create a new network.");
+                throw new Exception("A NetworkHead is required first to create a new network.");
             }
         }
 
