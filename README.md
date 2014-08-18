@@ -9,3 +9,8 @@ Commit a3481ca8de9523846ba18787d2e85ff8001e9da4:
 - Added DataBuffer to OpenSSL-like buffering.
 - Completed networking basics, and added a network profiling tool (unfinished).
 - Organization improvement.
+
+
+Notes:
+
+ComponentMover.java is from http://www.camick.com/java/source/ComponentMover.java.
