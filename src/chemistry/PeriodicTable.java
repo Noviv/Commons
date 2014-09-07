@@ -2,7 +2,14 @@ package chemistry;
 
 import chemistry.Constant.ElementClass;
 import chemistry.exception.ChemException;
+import java.io.IOException;
+import java.net.URL;
 import java.util.HashMap;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import org.w3c.dom.Document;
+import org.xml.sax.SAXException;
 
 /**
  * The periodic table, unfinished.
@@ -32,9 +39,10 @@ public class PeriodicTable {
 
     private void loadElements() {
         try {
-            elements.put(1, new Element("H", 1, 1.00794, ElementClass.NON_METAL, new ElectronConfig("1s1"), 1, 1));
-            elements.put(2, new Element("He", 2, 2.00260, ElementClass.NOBLE_GAS, new ElectronConfig("1s2"), 1, 18));
-        } catch (ChemException ce) {
+            DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+            DocumentBuilder db = dbf.newDocumentBuilder();
+            Document doc = db.parse(new URL("").openStream());
+        } catch (ParserConfigurationException | IOException | SAXException e) {
         }
     }
 

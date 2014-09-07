@@ -1,7 +1,5 @@
 package live.network;
 
-import data.databuffer.BufferAlgorithm;
-import data.databuffer.DataBuffer;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -33,7 +31,7 @@ public final class Network {
 
     public void writeData(Byte[] data, boolean onHead) {
         if (onHead) {
-            nb.getHead().writeData(data, false);
+            nb.getHead().writeData(data);
         } else {
         }
     }
@@ -44,11 +42,9 @@ public final class Network {
 
         private Socket socket;
         private ServerSocket ss;
-        private DataBuffer buffer;
 
         public NetworkHead(IP ip) {
             this.ip = ip;
-            buffer = new DataBuffer(BufferAlgorithm.FRONT_AND_BACK);
             try {
                 socket = new Socket(ip.host.getAsString(), ip.port.getAsInt());
                 ss = new ServerSocket();
@@ -68,11 +64,7 @@ public final class Network {
             return socket != null && socket.isConnected();
         }
 
-        public void writeData(Byte[] data, boolean hasBuffer) {
-            if (!hasBuffer) {
-                buffer.apply(data);
-            }
-
+        public void writeData(Byte[] data) {
             try {
                 if (getOS() != null && getIS() != null) {
                     getOS().write(ClassConverter.convertToByteAry(data));

@@ -17,14 +17,9 @@ import javax.swing.JLabel;
 import javax.swing.SwingUtilities;
 
 public class Dashboard extends javax.swing.JFrame {
-    
-    public static void main(String[] args) throws Exception {
-        Dashboard d = new Dashboard("Test Dashboard", 2);
-        d.putValue("pKValFwd", (Number) 10, "pwds");
-    }
 
     public static ArrayList<Integer> ids = new ArrayList<>();
-    
+
     private ComponentMover cm;
     private HashMap<Object, Number> values;
 
@@ -32,10 +27,10 @@ public class Dashboard extends javax.swing.JFrame {
         if (ids.contains(ID)) {
             throw DashboardException.ID_ALREADY_EXISTS;
         }
-        
+
         cm = new ComponentMover();
         values = new HashMap<>();
-        
+
         initComponents();
         setTitle(name + " - " + ID);
         setVisible(true);
@@ -97,7 +92,7 @@ public class Dashboard extends javax.swing.JFrame {
         private Cursor originalCursor;
         private boolean autoscrolls;
         private boolean potentialDrag;
-        
+
         public ComponentMover() {
         }
 

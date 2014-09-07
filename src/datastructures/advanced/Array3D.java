@@ -1,7 +1,6 @@
 package datastructures.advanced;
 
 import data.datastructures.Ternary;
-import datastructures.exceptions.AdvancedDataException;
 import datastructures.exceptions.ConstraintException;
 
 /**
