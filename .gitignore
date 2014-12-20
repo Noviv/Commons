@@ -13,3 +13,4 @@ hs_err_pid*
 
 #Mac configuration
 .DS_STORE
+/Commons/build/
