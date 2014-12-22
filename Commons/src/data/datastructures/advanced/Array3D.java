@@ -1,7 +1,7 @@
-package datastructures.advanced;
+package data.datastructures.advanced;
 
 import data.datastructures.Ternary;
-import datastructures.exceptions.ConstraintException;
+import data.datastructures.exceptions.ConstraintException;
 
 /**
  * A 3D array.

@@ -1,4 +1,4 @@
-package datastructures.specific;
+package data.datastructures.specific;
 
 import math.encryption.M1;
 import math.encryption.SHA256;

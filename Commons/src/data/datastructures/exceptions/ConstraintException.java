@@ -1,4 +1,4 @@
-package datastructures.exceptions;
+package data.datastructures.exceptions;
 
 /**
  * Exception dealing with bounds.

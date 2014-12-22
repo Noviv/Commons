@@ -1,4 +1,4 @@
-package datastructures.advanced;
+package data.datastructures.advanced;
 
 /**
  * Modes (algorithms) in data searching.
