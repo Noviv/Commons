@@ -1,14 +1,12 @@
 package data.datastructures;
 
-import cInterfaces.Equatable;
-
 /**
  * Create a ternary. Meant to act as a boolean for 3 values.
  *
  * @author Matthew Webb
  * @version 1.0
  */
-public class Ternary implements Equatable {
+public class Ternary {
 
     private TernaryCase val;
 
@@ -52,15 +50,6 @@ public class Ternary implements Equatable {
      */
     public void set(TernaryCase value) {
         val = value;
-    }
-
-    @Override
-    public boolean isEqualTo(Object other) {
-        if (other instanceof Ternary) {
-            return ((Ternary) other).get() == val;
-        } else {
-            return false;
-        }
     }
 
     /**

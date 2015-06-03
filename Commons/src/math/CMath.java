@@ -6,7 +6,7 @@ package math;
  * @author Matthew Webb
  */
 public final class CMath {
-    
+
     private CMath() {
     }
 
@@ -20,7 +20,7 @@ public final class CMath {
     public static double logBase(double base, double num) {
         return Math.log(num) / Math.log(base);
     }
-    
+
     /**
      * Calculate the result of a logarithmic function with an exponent.
      *
