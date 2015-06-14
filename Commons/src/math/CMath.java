@@ -34,13 +34,23 @@ public final class CMath {
     }
 
     /**
-     * Take the cube root of a number
+     * Take the square root of a number.
      *
-     * @param toCRoot The number to cube root.
-     * @return The cube root of toCRoot.
+     * @param val The number.
+     * @return The square root.
      */
-    public static double cubeRoot(double toCRoot) {
-        return baseRoot(toCRoot, 3);
+    public static double squareRoot(double val) {
+        return baseRoot(val, 2);
+    }
+
+    /**
+     * Take the cube root of a number.
+     *
+     * @param val The number.
+     * @return The cube root.
+     */
+    public static double cubeRoot(double val) {
+        return baseRoot(val, 3);
     }
 
     /**
@@ -52,6 +62,56 @@ public final class CMath {
      */
     public static double baseRoot(double toRoot, int base) {
         return Math.pow(toRoot, 1.0 / base);
+    }
+
+    /**
+     * Raises e to the power of the argument.
+     *
+     * @param val Exponent.
+     * @return e^val
+     */
+    public static double exp(double val) {
+        return Math.pow(Constants.E, val);
+    }
+
+    /**
+     * Raises the value to the second power.
+     *
+     * @param val The value.
+     * @return value^2
+     */
+    public static double square(double val) {
+        return raise(val, 2.0);
+    }
+
+    /**
+     * Raises the value to the third power.
+     *
+     * @param val The value.
+     * @return value^3
+     */
+    public static double cube(double val) {
+        return Math.pow(val, 3.0);
+    }
+
+    /**
+     * Raises the value to the nth power.
+     *
+     * @param val The value.
+     * @return value^n
+     */
+    public static double raise(double val, double n) {
+        return Math.pow(val, n);
+    }
+
+    /**
+     * Invert a value.
+     *
+     * @param val The value.
+     * @return Reciprocal of value.
+     */
+    public static double inverse(double val) {
+        return 1.0 / val;
     }
 
     /**
