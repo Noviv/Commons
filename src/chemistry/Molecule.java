@@ -7,7 +7,6 @@ import java.util.ArrayList;
  * A molecule.
  *
  * @author Matthew Webb
- * @see 1.0
  */
 public class Molecule {
 
@@ -17,8 +16,7 @@ public class Molecule {
      * Creates a new molecule.
      *
      * @param elems The elements in the molecule.
-     * @param freqs The number of elements for each molecule in the latter
-     * array.
+     * @param freqs The number of elements for each molecule in the latter array.
      * @throws ChemException Thrown if the two arrays are not the same length.
      */
     public Molecule(Element[] elems, int[] freqs) throws ChemException {

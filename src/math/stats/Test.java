@@ -11,11 +11,11 @@ public class Test {
     /**
      * Test a one proportion z-test using parameters.
      *
-     * @param p0
-     * @param x
-     * @param n
-     * @param type
-     * @return
+     * @param p0 p0
+     * @param x x
+     * @param n n
+     * @param type type
+     * @return InfoSet
      */
     public static InfoSet onePropZTest(double p0, int x, int n, PropType type) {
         InfoSet msgs = new InfoSet();
@@ -43,8 +43,7 @@ public class Test {
      * @param proportion The mean proportion.
      * @param critical The critical z or t value.
      * @param n The number of trials.
-     * @return An <code>InfoSet</code> with all the data about the confidence
-     * interval.
+     * @return An <code>InfoSet</code> with all the data about the confidence interval.
      */
     public static InfoSet confidInt(double proportion, double critical, int n) {
         InfoSet info = new InfoSet();
@@ -63,8 +62,7 @@ public class Test {
      * @param critical The critical z or t value.
      * @param std The standard deviation of the sample.
      * @param n The number of trials in the sample.
-     * @return An <code>InfoSet</code> with all the data about the confidence
-     * interval.
+     * @return An <code>InfoSet</code> with all the data about the confidence interval.
      */
     public static InfoSet confidInt(double mean, double critical, double std, int n) {
         InfoSet info = new InfoSet();
@@ -96,8 +94,7 @@ public class Test {
     }
 
     /**
-     * Cumulative probability function. Finds the area under the standard normal
-     * curve to the left of the given value.
+     * Cumulative probability function. Finds the area under the standard normal curve to the left of the given value.
      *
      * @param valueOnDist The value on the distribution.
      * @return The area under the curve to the left of the value.
@@ -137,8 +134,7 @@ public class Test {
      * @param observed The observed values.
      * @param expected The expected values.
      * @return The chi-squared test statistic.
-     * @throws MException Thrown if
-     * <code>observed.length != expected.length</code>.
+     * @throws MException Thrown if <code>observed.length != expected.length</code>.
      */
     public static double x2Test(double[] observed, double[] expected) throws MException {
         double toReturn = 0.0;

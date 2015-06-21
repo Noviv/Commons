@@ -98,6 +98,7 @@ public final class CMath {
      * Raises the value to the nth power.
      *
      * @param val The value.
+     * @param n The exponent
      * @return value^n
      */
     public static double raise(double val, double n) {

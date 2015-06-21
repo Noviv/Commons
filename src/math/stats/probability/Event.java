@@ -39,7 +39,7 @@ public class Event {
     /**
      * Test the event using <code>Math.random()</code>.
      *
-     * @return True if <code>Math.random()</code> is >= probability.
+     * @return True if <code>Math.random()</code> is greater than or equal to probability.
      */
     public boolean test() {
         return (Math.random() >= probability);

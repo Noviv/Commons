@@ -32,7 +32,7 @@ public class ChemEquation {
      *
      * @param elems The array of elements to be used. <br> YOU MUST INCLUDE ONE
      * NULL VALUE AFTER THE LIST OF REACTANTS.
-     * @param full
+     * @param full Whether or not the array given represents the full equation or a partial equation
      */
     public ChemEquation(Element[] elems, boolean full) {
         first = new ArrayList<>();

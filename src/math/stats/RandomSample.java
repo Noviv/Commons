@@ -21,11 +21,11 @@ public class RandomSample {
     /**
      * Creates a new RandomSample.
      *
-     * @param type
-     * @param size
-     * @param populationValues
-     * @param replacement
-     * @throws MException
+     * @param type Random sample type
+     * @param size Size
+     * @param populationValues The entire population
+     * @param replacement Whether or not replacement is used during stratification
+     * @throws MException Mathematical exception if a configuration cannot be used
      */
     public RandomSample(Constant type, int size, Integer[] populationValues, boolean replacement) throws MException {
         if (type == Constant.RANDOM_SAMPLE_SIMPLE) {// || type == TYPE_STRATIFIED
@@ -50,13 +50,12 @@ public class RandomSample {
     /**
      * Creates a new RandomSample, with stratified-sample parameter. Unfinished.
      *
-     * @param type
-     * @param size
-     * @param populationValues
-     * @param stratumIndex The values to set as strata. Order: [strataLevel,
-     * numberOfValuesInStrata, strataLevel + 1, numberOfValuesInStrata2].
-     * @param replacement
-     * @throws MException
+     * @param type Random sample type
+     * @param size Size
+     * @param populationValues The entire population
+     * @param stratumIndex The values to set as strata. Order: [strataLevel, numberOfValuesInStrata, strataLevel + 1, numberOfValuesInStrata2].
+     * @param replacement Whether or not replacement is used during stratification
+     * @throws MException Mathematical error while calculating random sample
      */
     public RandomSample(Constant type, int size, Integer[] populationValues, int[] stratumIndex, boolean replacement) throws MException {
         int temp = 0;
@@ -100,8 +99,7 @@ public class RandomSample {
 
     /**
      * Gets the type of sample.
-     * <br><br>WARNING: Only use in comparison to other <code>Constant</code>
-     * objects.
+     * <br><br>WARNING: Only use in comparison to other <code>Constant</code> objects.
      *
      * @return The type of sample as a <code>Constant</code>.
      */
@@ -176,7 +174,7 @@ public class RandomSample {
     /**
      * Returns the sample values as an <code>int[]</code>.
      *
-     * @return
+     * @return Sample values
      */
     public int[] getSampleValues() {
         return values;

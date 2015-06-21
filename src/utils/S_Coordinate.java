@@ -22,12 +22,12 @@ public final class S_Coordinate {
     /**
      * Get the x coordinate.
      *
-     * @return
+     * @return X coordinate.
      */
     public double getX() {
         return x;
     }
-    
+
     /**
      * Get the y coordinate.
      *

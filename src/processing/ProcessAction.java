@@ -15,7 +15,7 @@ public abstract class ProcessAction implements Runnable {
      * Add a relative <code>InfoSet</code> to the action, in case you want
      * information about it.
      *
-     * @param i
+     * @param i InfoSet
      */
     public void putInfoSet(InfoSet i) {
         info = i;

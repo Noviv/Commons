@@ -31,7 +31,7 @@ public class PeriodicTable {
     /**
      * Gets the <code>PeriodicTable</code> singleton.
      *
-     * @return
+     * @return The periodic table.
      */
     public static PeriodicTable getInstance() {
         return pt;

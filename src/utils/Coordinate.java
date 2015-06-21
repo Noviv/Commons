@@ -22,7 +22,7 @@ public final class Coordinate {
     /**
      * Get the x coordinate.
      *
-     * @return
+     * @return X coordinate.
      */
     public int getX() {
         return x;

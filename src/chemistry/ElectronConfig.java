@@ -20,8 +20,7 @@ public class ElectronConfig {
      *
      * @param config The string consisting of the entire configuration.
      * <br><br>Example: "1s2 2s2 2p5".
-     * @throws ChemException Thrown if any of the orbitals are overfilled or
-     * negative.
+     * @throws ChemException Thrown if any of the orbitals are overfilled or negative.
      */
     public ElectronConfig(String config) throws ChemException {
         bases = new ArrayList<>();
@@ -56,8 +55,7 @@ public class ElectronConfig {
     }
 
     /**
-     * Get an actual base of the electron configuration (from the inputted
-     * string).
+     * Get an actual base of the electron configuration (from the inputted string).
      *
      * @param index The index of the orbital.
      * @return The base as a <code>String</code>.
@@ -69,8 +67,8 @@ public class ElectronConfig {
     /**
      * Gets the split base, as in the partial base of the
      *
-     * @param index
-     * @return
+     * @param index Index of part of electron configuration.
+     * @return String in electron configuration.
      */
     public String getSplitBase(int index) {
         return bases.get(index);

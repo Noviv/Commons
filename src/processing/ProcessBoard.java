@@ -47,8 +47,7 @@ public class ProcessBoard {
     }
 
     /**
-     * Set the <code>ProcessBoard</code>'s default close operation. Will throw
-     * <code>IllefalArgumentException</code> if not a JFrame constant.
+     * Set the <code>ProcessBoard</code>'s default close operation. Will throw <code>IllefalArgumentException</code> if not a JFrame constant.
      *
      * @param closeOperation The close operation <code>int</code> constant.s
      */
@@ -146,8 +145,8 @@ public class ProcessBoard {
      * Put a string onto the board.
      *
      * @see java.util.HashMap
-     * @param key
-     * @param value
+     * @param key Key
+     * @param value String value
      */
     public static synchronized void putString(String key, String value) {
         strings.put(key, value);
@@ -157,8 +156,8 @@ public class ProcessBoard {
     /**
      * Get a string from the board.
      *
-     * @param key
-     * @return
+     * @param key Key
+     * @return String value
      */
     public static synchronized String getString(String key) {
         return strings.get(key);
@@ -169,8 +168,8 @@ public class ProcessBoard {
      * Put an int onto the board.
      *
      * @see java.util.HashMap
-     * @param key
-     * @param value
+     * @param key Key
+     * @param value Int value
      */
     public static synchronized void putInt(String key, int value) {
         integers.put(key, value);
@@ -180,8 +179,8 @@ public class ProcessBoard {
     /**
      * Get an int from the board.
      *
-     * @param key
-     * @return
+     * @param key Key
+     * @return Int value
      */
     public static synchronized int getInt(String key) {
         return integers.get(key);
@@ -190,8 +189,8 @@ public class ProcessBoard {
     /**
      * Put a double onto the board.
      *
-     * @param key
-     * @param value
+     * @param key Key
+     * @param value Double value
      */
     public static synchronized void putDouble(String key, double value) {
         doubles.put(key, value);
@@ -201,8 +200,8 @@ public class ProcessBoard {
     /**
      * Get an double from the board.
      *
-     * @param key
-     * @return
+     * @param key Key
+     * @return Double value
      */
     public static synchronized double getDouble(String key) {
         return doubles.get(key);
@@ -211,8 +210,8 @@ public class ProcessBoard {
     /**
      * Put a boolean onto the board.
      *
-     * @param key
-     * @param value
+     * @param key Key
+     * @param value Boolean value
      */
     public static synchronized void putBoolean(String key, boolean value) {
         booleans.put(key, value);
@@ -222,8 +221,8 @@ public class ProcessBoard {
     /**
      * Get a boolean from the board.
      *
-     * @param key
-     * @return
+     * @param key Key
+     * @return Boolean value
      */
     public static synchronized boolean getBoolean(String key) {
         return booleans.get(key);

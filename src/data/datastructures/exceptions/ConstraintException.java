@@ -9,8 +9,9 @@ package data.datastructures.exceptions;
 public class ConstraintException extends Exception {
 
     /**
-     * 
-     * @param msg
+     * Create a new Constraint exception for borders or bounds.
+     *
+     * @param msg Constraint error message.
      */
     public ConstraintException(String msg) {
         super(msg);
