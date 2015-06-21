@@ -1,4 +1,4 @@
-Commons
+Commons [![Build Status](https://travis-ci.org/Noviv/Commons.svg?branch=master)](https://travis-ci.org/Noviv/Commons)
 =======
 
 Hopefully a compilation of everything that I have learned in school and in CS.
