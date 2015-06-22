@@ -3,11 +3,13 @@ language: java
 jdk:
   - oraclejdk8
   
+before_install:
+  - git submodule update --init --recursive
+
 install:
-  - pip install coveralls
+  - pip install python
+  
+before_script:
+  - python etc/travis-sonatype.py
 
-script:
-  coverage run --source=build manage.py test
-
-after_success:
-  coveralls
+script: python etc/travis-build.py --settings ~/.m2/sonatype.xml
