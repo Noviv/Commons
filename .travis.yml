@@ -2,14 +2,4 @@ language: java
 
 jdk:
   - oraclejdk8
-  
-before_install:
-  - git submodule update --init --recursive
-
-install:
-  - pip install python
-  
-before_script:
-  - python etc/travis-sonatype.py
-
-script: python etc/travis-build.py --settings ~/.m2/sonatype.xml
+  - oraclejdk7
