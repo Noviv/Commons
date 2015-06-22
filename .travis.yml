@@ -3,11 +3,11 @@ language: java
 jdk:
   - oraclejdk8
   
-before_install:
-  - mvn install -DskipTests=true -e
-  
+install:
+  - pip install coveralls
+
 script:
-  - mvn test -X
-  
-after_succes:
-  - mvn clean cobertura:cobertura coveralls:cobertura -P ci
+  coverage run --source=build manage.py test
+
+after_success:
+  coveralls
