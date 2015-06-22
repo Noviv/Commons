@@ -2,3 +2,12 @@ language: java
 
 jdk:
   - oraclejdk8
+  
+before_install:
+  - mvn install -DskipTests=true -e
+  
+script:
+  - mvn test -X
+  
+after_succes:
+  - mvn clean cobertura:cobertura coveralls:cobertura -P ci
