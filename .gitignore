@@ -4,7 +4,6 @@
 .mtj.tmp/
 
 # Package Files #
-*.jar
 *.war
 *.ear
 
@@ -13,4 +12,3 @@ hs_err_pid*
 
 #Mac configuration
 .DS_STORE
-/Commons/build/
