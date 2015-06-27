@@ -6,7 +6,6 @@ import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 import live.network.config.IP;
-import utils.ClassConverter;
 
 public final class Network {
 
@@ -67,7 +66,11 @@ public final class Network {
         public void writeData(Byte[] data) {
             try {
                 if (getOS() != null && getIS() != null) {
-                    getOS().write(ClassConverter.convertToByteAry(data));
+                    byte[] oByte = new byte[data.length];
+                    for (int i = 0; i < oByte.length && i < data.length; i++) {
+                        oByte[i] = data[i];
+                    }
+                    getOS().write(oByte);
                 }
             } catch (IOException e) {
             }

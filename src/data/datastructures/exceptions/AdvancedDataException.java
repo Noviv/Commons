@@ -1,7 +1,5 @@
 package data.datastructures.exceptions;
 
-import utils.Erronous;
-
 /**
  * Exception dealing with advanced data structures or algorithms.
  *
@@ -10,8 +8,6 @@ import utils.Erronous;
  */
 public class AdvancedDataException extends Exception {
 
-    private Erronous errObj;
-
     /**
      * Create a new <code>AdvancedDataException</code>.
      *
@@ -19,16 +15,5 @@ public class AdvancedDataException extends Exception {
      */
     public AdvancedDataException(String msg) {
         super(msg);
-    }
-
-    /**
-     * Create a new <code>AdvancedDataException</code>.
-     *
-     * @param msg The error message.
-     * @param err The object (usually data structure) causing the error.
-     */
-    public AdvancedDataException(String msg, Erronous err) {
-        super(msg);
-        errObj = err;
     }
 }

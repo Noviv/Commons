@@ -1,6 +1,6 @@
-package utils;
+package system.output;
 
-import static utils.Print.p;
+import static system.output.Print.p;
 
 public class F_Print {
 

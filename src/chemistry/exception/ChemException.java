@@ -1,7 +1,5 @@
 package chemistry.exception;
 
-import utils.Erronous;
-
 /**
  * Exception dealing with Commons chemistry.
  *
@@ -30,8 +28,6 @@ public class ChemException extends Exception {
      */
     public static final ChemException EQ_NOT_COMPLETE = new ChemException("Chemical equation is not complete!");
 
-    private Erronous object;
-
     /**
      * Create a new chemistry exception.
      *
@@ -39,26 +35,5 @@ public class ChemException extends Exception {
      */
     public ChemException(String msg) {
         super(msg);
-    }
-
-    /**
-     * Create a new chemistry exception with a cause.
-     *
-     * @param msg The error.
-     * @param obj The causing object.
-     */
-    public ChemException(String msg, Erronous obj) {
-        super(msg);
-        object = obj;
-    }
-
-    /**
-     * Get the object that caused the error.
-     *
-     * @return The Erronous that caused the error, or null if the exception was
-     * not initialized with one.
-     */
-    public Erronous getErrorObj() {
-        return object;
     }
 }
