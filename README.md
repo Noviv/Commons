@@ -1,6 +1,7 @@
 # Commons [![Build Status](https://travis-ci.org/Noviv/Commons.svg?branch=master)](https://travis-ci.org/Noviv/Commons)
 
-Hopefully a compilation of everything that I have learned in school and in CS. Tested against Java 7 and 8.
+Hopefully a compilation of everything that I have learned in school and in CS. Tested against Java 7 and 8. Project ended as of July 22, 2015: project aims too high.
+
 <br>
 ## Download Library
 1. Download Commons.jar from dist folder.
